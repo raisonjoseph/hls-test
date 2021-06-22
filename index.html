@@ -31,15 +31,15 @@
 
 
   <script>
-    videojs.Hls.xhr.beforeRequest = function (options) {
-      /*
-       * Modifications to requests that will affect every player.
-       */
-      if (options.uri.includes('key')) {
-        options.uri = "https://entri-videos.s3.ap-south-1.amazonaws.com/hls_testing/key/key.bin"
-      }
-      return options;
-    };
+    // videojs.Hls.xhr.beforeRequest = function (options) {
+    //   /*
+    //    * Modifications to requests that will affect every player.
+    //    */
+    //   if (options.uri.includes('key')) {
+    //     options.uri = "https://entri-videos.s3.ap-south-1.amazonaws.com/hls_testing/key/key.bin"
+    //   }
+    //   return options;
+    // };
     var player = videojs('my_video_1', {
       html5: {
         hls: {
@@ -53,4 +53,4 @@
 
 </body>
 
-</html>
+</html>   
