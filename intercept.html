@@ -39,9 +39,7 @@
       /*
        * Modifications to requests that will affect every player.
        */
-      if (options.uri.includes('key')) {
-        options.uri = "https://entri-videos.s3.ap-south-1.amazonaws.com/hls_testing/key/key.bin"
-      }
+      console.log('options')
       return options;
     };
     var player = videojs('player', {
@@ -64,6 +62,7 @@
       },
     });
 
+    console.log(navigator.appVersion)
 
     player.src("https://entri-videos.s3.ap-south-1.amazonaws.com/media/ml/jaseem/2021-06-15/hls_test_2/output/whiteboard.m3u8")
 
@@ -74,6 +73,7 @@
     //   tabIndex: 3
     // }, 2).addClass("button-back");
 
+    ./BrowserStackLocal --key xK49ydyszrsv6ym5EJtY --force-local
 
     // var concreteButtonInstance = player.controlBar.addChild(new concreteButtonClass(), {}, 2);
     // concreteButtonInstance.addClass("vjs-" + name);
