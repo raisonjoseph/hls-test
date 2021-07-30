@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <meta charset=utf-8 />
+  <meta charset="utf-8" />
   <title>videojs-contrib-hls embed</title>
 
   <!--
@@ -17,40 +17,58 @@
   <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
   <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
   <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
-
+  <style>
+    .card{
+      margin: auto;
+      width: 80%;
+    }
+  </style>
 </head>
 
 <body>
   <h1>Video.js Example Embed</h1>
 
-  <video-js id="my_video_1" class="vjs-default-skin vjs-16-9" controls preload="auto" width="136">
-    <source
-      src="https://entri-videos.s3.ap-south-1.amazonaws.com/media/ml/jaseem/2021-06-15/hls_test_2/output/whiteboard.m3u8"
-      type="application/x-mpegURL">
-  </video-js>
+  <div class="card">
+    <div data-vjs-player>
+      <video-js id="my_video_1" class="vjs-default-skin vjs-16-9" controls preload="auto" width="136">
+        <source src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8" type="application/x-mpegURL" />
+      </video-js>
+    </div>
 
+  </div>
 
   <script>
-    // videojs.Hls.xhr.beforeRequest = function (options) {
-    //   /*
-    //    * Modifications to requests that will affect every player.
-    //    */
-    //   if (options.uri.includes('key')) {
-    //     options.uri = "https://entri-videos.s3.ap-south-1.amazonaws.com/hls_testing/key/key.bin"
-    //   }
-    //   return options;
-    // };
-    var player = videojs('my_video_1', {
+    const options = {
+      fill: true,
+      fluid: true,
+      preload: "auto",
+      mute: true,
+      controlBar: {
+        timeDivider: false,
+        durationDisplay: false,
+        remainingTimeDisplay: false,
+        customControlSpacer: true,
+        pictureInPictureToggle: false,
+        captionsButton: false,
+        fullscreenToggle: true,
+        subsCapsButton: false,
+      },
+      html5: {
+        hls: {
+          withCredentials: true,
+        },
+      },
+    };
+    var player = videojs("my_video_1", {
       html5: {
         hls: {
           overrideNative: false,
           withCredentials: false,
-          handleManifestRedirects: true
-        }
-      }
+          handleManifestRedirects: true,
+        },
+      },
     });
   </script>
-
 </body>
 
-</html>   
+</html>

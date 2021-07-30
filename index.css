@@ -523,3 +523,7 @@
 .vjs-theme-dt-audio.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
   opacity: 1;
 }
+
+.card{
+  margin: auto
+}
