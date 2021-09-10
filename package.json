@@ -1,45 +1,25 @@
 {
-  "homepage": "https://raisonjoseph.github.io/hls-test/",
-  "name": "react-hls",
-  "version": "0.1.0",
-  "private": true,
+  "name": "hls-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mux.min.js",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "video.js": "^7.14.3",
-    "web-vitals": "^1.0.1"
+    "videojs-hls-quality-selector": "^1.1.4",
+    "video.js": "^7.15.2",
+    "videojs-contrib-quality-levels": "^2.0.9"
   },
+  "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raisonjoseph/hls-test.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raisonjoseph/hls-test/issues"
   },
-  "devDependencies": {
-    "gh-pages": "^3.2.3"
-  }
+  "homepage": "https://github.com/raisonjoseph/hls-test#readme"
 }
